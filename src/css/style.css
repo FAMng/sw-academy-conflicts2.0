@@ -9,6 +9,7 @@ html,body{
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
+    background-color: #dfb4b4;
 }
 .off-scroll{
     overflow: hidden;
@@ -83,7 +84,7 @@ html,body{
 }
 .header__btn-callback:hover{
     cursor: pointer;
-    background: #161515;
+    background: #dfb4b4;
     color: #ffffff;
     transition: background-color 0.5s ease, color 0.5s ease  ;
 }
@@ -194,7 +195,7 @@ html,body{
 }
 .connect--link,
 .contacts__people-office-item-text--job-title{
-    color: #E63E35;
+    color: #64fb00;
     line-height: 150%;
 }
 .contacts__info-connect-socials {
@@ -218,7 +219,7 @@ html,body{
 .contacts__people{
     display: flex;
     padding: 32px 16px;
-    flex-direction: column;
+    flex-direction:  column-reverse;
     align-items: flex-start;
     gap: 32px;
 }
@@ -237,6 +238,7 @@ html,body{
     font-weight: 900;
     line-height: 150%;
     text-transform: uppercase;
+    color: blueviolet;
 }
 .contacts__people-office-items{
     display: flex;
@@ -261,12 +263,12 @@ html,body{
     align-self: center;
 }
 .contacts__description-container{
-    padding: 32px 16px;
+    padding: 64px 12px;
     display: flex;
     flex-direction: column;
     max-width: 1279px;
     gap: 24px;
-    color:  #5D5D5D;
+    color: #070606;
 }
 .contacts__description-item--title{
     font-family: "RF Dewi Expanded" ,sans-serif;
