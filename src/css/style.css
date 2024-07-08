@@ -1,0 +1,577 @@
+@import url('../fonts/stylesheet.css');
+*  {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+html,body{
+    font-family: "RF Dewi", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+.off-scroll{
+    overflow: hidden;
+}
+.open{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #E63E35;
+}
+.open__menu-style li{
+    list-style-type: none;
+}
+.open__menu-style li a{
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    font-family: "RF Dewi", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.header__container{
+    background: #fff;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+.header__link--logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.header__logo-text{
+    display: none;
+}
+.header__link--logo img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.btn--style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 8px;
+    font-family: "RF Dewi", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.5s ease, background 0.5s ease;
+}
+.header__btn-callback{
+    border: 2px solid #000;
+    background: #ffff;
+    color: #000;
+    font-size: 14px;
+    white-space : nowrap;
+}
+.header__btn-callback:hover{
+    cursor: pointer;
+    background: #161515;
+    color: #ffffff;
+    transition: background-color 0.5s ease, color 0.5s ease  ;
+}
+.header__link--phone{
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #E63E35;
+    text-decoration: none;
+}
+.header__link-phone--tel,
+.header__link-phone--description{
+    display: none;
+}
+.header__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #B8B8B8;
+    background: none;
+    width: 34px;
+    height: 34px;
+    margin-left: auto;
+}
+.menu__wrapper {
+    display: inline-block;
+    cursor: pointer;
+    padding: 6px;
+    position: relative;
+    z-index: 1;
+}
+.menu span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+.menu span:last-child {
+    margin-bottom: 0;
+}
+.menu.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+    background-color: #000;
+}
+.menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+    background-color: #000;
+}
+.header__menu{
+    display: none;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 57px;
+}
+.contacts__info{
+    display: flex;
+    padding: 32px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    background: #000;
+    color: #fff;
+}
+.contacts__info-title{
+    font-family: "RF Dewi Expanded", sans-serif;
+    font-size: 34px;
+    line-height: 120%;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+}
+.instagram,
+.vk{
+    fill: white;
+}
+.instagram:hover,
+.vk:hover{
+    fill: #E63E35;
+    transition: fill 0.5s ease;
+}
+.contacts__info_connect--container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contacts__info-connect-title,
+.contacts__info-footer-title{
+    color: #5D5D5D;
+    font-family: "RF Dewi Expanded", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 120%;
+}
+.contacts__info-connect-text,
+.contacts__info-footer-text{
+    line-height: 150%;
+}
+.connect--link,
+.contacts__people-office-item-text--job-title{
+    color: #E63E35;
+    line-height: 150%;
+}
+.contacts__info-connect-socials {
+    display: flex;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    gap: 16px;
+}
+.contacts__info-connect-social {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+.contacts__info-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contacts__people{
+    display: flex;
+    padding: 32px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+.contacts__people-office,
+.contacts__people-production{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+.contacts__people-office-title{
+    font-family: "RF Dewi Expanded", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+.contacts__people-office-items{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contacts__people-office-item{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.contacts__people-office-item-text--name{
+    font-family: "RF Dewi Expanded", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%;
+}
+.contacts__description{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.contacts__description-container{
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1279px;
+    gap: 24px;
+    color:  #5D5D5D;
+}
+.contacts__description-item--title{
+    font-family: "RF Dewi Expanded" ,sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%;
+    margin-bottom: 16px;
+}
+.contacts__description-item--text{
+    line-height: 150%;
+}
+.footer {
+    color: #fff;
+    background-color: #161515;
+}
+.footer__container {
+    display: flex;
+    padding: 32px 16px 62px 16px;
+    flex-direction: column;
+    gap: 64px;
+    position: relative;
+}
+.footer__container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image:
+            linear-gradient(rgba(22, 21, 21, 0.8), rgba(22, 21, 21, 0.8)),
+            url("../img/footer-logo.png");
+    background-repeat: no-repeat;
+    background-size: 80vw;
+    background-position: right 100%;
+}
+.footer__header-lable--title{
+    font-family: "RF Dewi Expanded", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.footer__header-lable--subtext{
+    line-height: 150%;
+}
+.footer__left-section{
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    z-index: 2;
+}
+.footer__form{
+    display:flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.footer__form-text{
+    border: 2px solid #B8B8B8;
+    background: #FFF;
+    height: 34px;
+    padding-left:20px;
+    transition: color 0.5s ease, border 0.5s ease;
+}
+.footer__form-text:hover{
+    color: #000;
+    border: 2px solid #161515;
+    transition: color 0.5s ease, border 0.5s ease;
+}
+.footer__form-text:hover::placeholder,
+.footer__form-comment:hover::placeholder{
+    color: #000;
+    transition: color 0.5s ease
+}
+.footer__form-comment{
+    border: 2px solid #B8B8B8;
+    background: #FFF;
+    min-height: 18px;
+    max-height: 150px;
+    padding: 12px 24px;
+}
+.footer__form-comment:hover{
+    border: 2px solid #161515;
+    transition:  border 0.5s ease;
+}
+.footer__form-btn{
+    color: #FFF;
+    font-size: 16px;
+    width: 100%;
+    background: #B8B8B8;
+    cursor: pointer;
+}
+.footer__form-btn:hover{
+    background: #E63E35;
+    transition: background 0.5s ease;
+}
+.footer__form-comment{
+    resize: vertical;
+}
+.footer__policy{
+    color: #5D5D5D;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+.footer__policy-link{
+    color: #E63E35;
+}
+.footer__right-section{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    line-height: 150%;
+    text-align: right;
+    z-index: 2;
+}
+.footer__right-section--tel,
+.footer__right-section--mail{
+    color: #E63E35;
+    text-decoration: none;
+}
+.footer__right-section--rights{
+    color: #5D5D5D;
+    line-height: 150%;
+}
+.footer__form--wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+@media (min-width:768px){
+    .header__logo-text{
+        display: block;
+        text-transform: uppercase;
+        color: #2C2B2E;
+        font-family: "RF Dewi Expanded", sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 120%;
+    }
+    .contacts__description-container{
+        margin: 100px 0;
+        padding: 60px;
+    }
+    .contacts__people{
+        padding: 64px 40px 0 40px;
+    }
+    .contacts__container{
+        display: flex;
+    }
+    .contacts__people-office-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px 16px;
+    }
+    .contacts{
+        position: absolute;
+        top: 49px;
+    }
+    .contacts__info{
+        height: 90vh;
+        padding: 64px;
+        position: sticky;
+        top:49px;
+    }
+}
+@media (min-width:1024px){
+    .header__container{
+        justify-content: flex-start;
+        padding: 15px 160px;
+        gap: 32px;
+    }
+    .header__btn,
+    .header__image-phone{
+        display: none;
+    }
+    .header__link--logo{
+        margin-right: auto;
+        cursor: pointer;
+    }
+    .header__link--phone{
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 0;
+        border: none;
+    }
+    .header__link--phone:hover .header__link-phone--tel{
+        color: #000;
+        transition: all 0.5s ease;
+    }
+    .header__link-phone--tel,
+    .header__link-phone--description{
+        display: block;
+    }
+    .header__link-phone--tel{
+        color: #E63E35;
+        text-align: right;
+        font-family: "RF Dewi Expanded", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        white-space : nowrap;
+        transition: all 0.5s ease;
+    }
+    .header__link-phone--description{
+        color: #000;
+        font-size: 13px;
+    }
+    .header__menu{
+        display: block;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+        position: sticky;
+        top:0;
+    }
+    .header__menu-items{
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 160px 10px;
+        gap: 42px;
+    }
+    .header__menu-item{
+        list-style-type: none;
+        display: flex;
+        padding: 16px;
+        font-family: "RF Dewi", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+        outline: 2px solid #000;
+        transition: outline 0.5s ease;
+        white-space: nowrap;
+    }
+    .header__menu-item:hover{
+        cursor: pointer;
+        outline: 2px solid #fff;
+        transition: outline 0.5s ease;
+    }
+    .header__menu-item-link{
+        text-decoration: none;
+        color: rgb(184, 184, 184);
+        transition: color 0.5s ease;
+    }
+    .header__menu-item:hover .header__menu-item-link{
+        color: #fff;
+        transition: color 0.5s ease;
+    }
+    .contacts,
+    .contacts__info{
+        top: 145px;
+    }
+    .contacts__info{
+        padding: 64px 64px 64px 160px;
+    }
+    .contacts__people-office-item {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        align-self: stretch;
+        list-style: none;
+        max-width: 372px;
+    }
+    .footer__container{
+        flex-direction: row;
+        padding: 102px 160px 59px 160px;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__container::after {
+        background-size: 40vw;
+        background-position: right 120%;
+    }
+    .footer__left-section{
+        display: flex;
+        width: 623px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        flex-shrink: 0;
+    }
+    .footer__form {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .footer__form--wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    .footer__form-text,
+    .footer__form--wrapper{
+        width: 100%;
+    }
+    .footer__form > :nth-child(2) {
+        flex-basis: 100%;
+    }
+    .footer__right-section{
+        align-self: flex-end;
+    }
+}

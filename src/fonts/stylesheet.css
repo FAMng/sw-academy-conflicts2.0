@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'RF Dewi Expanded';
+    src: local('RF Dewi Expanded Black'),
+    url('RFDewiExpanded-Black.woff') format('woff'),
+    url('RFDewiExpanded-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RF Dewi Expanded';
+    src: local('RFDewiExpanded-Ultrabold'),
+    url('RFDewiExpanded-Ultrabold.woff') format('woff'),
+    url('RFDewiExpanded-Ultrabold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RF Dewi';
+    src: local('RF Dewi Regular'),
+    url('RFDewi-Regular.woff') format('woff'),
+    url('RFDewi-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RF Dewi';
+    src: local('RF Dewi Bold'),
+    url('RFDewi-Bold.woff') format('woff'),
+    url('RFDewi-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
