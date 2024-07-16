@@ -9,6 +9,7 @@ html,body{
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
+    background-color: #EBEBEB;
 }
 .off-scroll{
     overflow: hidden;
