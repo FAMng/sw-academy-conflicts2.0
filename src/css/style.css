@@ -195,7 +195,7 @@ html,body{
 }
 .connect--link,
 .contacts__people-office-item-text--job-title{
-    color: #64fb00;
+    color: blue;
     line-height: 150%;
 }
 .contacts__info-connect-socials {
@@ -522,7 +522,7 @@ html,body{
         transition: color 0.5s ease;
     }
     .header__menu-item:hover .header__menu-item-link{
-        color: #fff;
+        color: red;
         transition: color 0.5s ease;
     }
     .contacts,
