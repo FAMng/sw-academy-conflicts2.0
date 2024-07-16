@@ -77,7 +77,7 @@ html,body{
 .header__btn-callback{
     border: 2px solid #000;
     background: #ffff;
-    color: #000;
+    color: #e71010;
     font-size: 14px;
     white-space : nowrap;
 }
@@ -229,6 +229,7 @@ html,body{
     align-items: flex-start;
     gap: 16px;
     align-self: stretch;
+    width: 700px;
 }
 .contacts__people-office-title{
     font-family: "RF Dewi Expanded", sans-serif;
@@ -425,6 +426,7 @@ html,body{
     .contacts__people-office-items {
         flex-direction: row;
         flex-wrap: wrap;
+
         gap: 30px 16px;
     }
     .contacts{
